@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Browse six movie picks, filter by genre and compare running times.">
+    <meta name="description" content="Browse six movie picks by genre and compare running times.">
     <title>Movies | MovieTime</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23b52b35'/%3E%3Cpath d='M8 24V8l8 10 8-10v16' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -36,90 +35,95 @@
                 <h1>Find your next movie</h1>
                 <p>Six films to start with. Read a little about each one or choose a genre you enjoy.</p>
             </div>
-            <section aria-label="Movie filters" class="filter-bar mb-4">
-                <div class="row g-3">
-                    <div class="col-md-8">
-                        <label class="form-label" for="movie-search">Search by title</label>
-                        <input class="form-control" type="search" id="movie-search" placeholder="Try Inception...">
-                    </div>
-                    <div class="col-md-4">
-                        <label class="form-label" for="genre-filter">Genre</label>
-                        <select class="form-select" id="genre-filter">
-                            <option value="All">All genres</option>
-                            <option value="Sci-Fi">Sci-Fi</option>
-                            <option value="Action">Action</option>
-                            <option value="Animation">Animation</option>
-                            <option value="Comedy">Comedy</option>
-                        </select>
-                    </div>
+            <p>Choose a genre to jump to its films. Open any synopsis for more information.</p>
+            <nav class="filter-bar mb-4 genre-links" aria-label="Browse movies by genre">
+                <span class="form-label">Jump to a genre:</span>
+                <a class="btn btn-outline-secondary btn-sm" href="#sci-fi">Sci-Fi</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#action">Action</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#animation">Animation</a>
+                <a class="btn btn-outline-secondary btn-sm" href="#comedy">Comedy</a>
+            </nav>
+            <h2 class="visually-hidden">Movie collection</h2>
+            <section class="genre-section" id="sci-fi" aria-labelledby="sci-fi-title">
+                <h2 id="sci-fi-title">Sci-Fi</h2>
+                <div class="movie-grid">
+                    <article class="movie-card" id="interstellar">
+                        <span class="pick-label">Movie night pick</span>
+                        <img src="images/interstellar.jpg" alt="Interstellar theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2014 &middot; Sci-Fi &middot; 169 min</p>
+                            <h3>Interstellar</h3>
+                            <p>A journey beyond Earth, with a family story at its centre.</p>
+                            <details><summary>Read synopsis</summary><p>A former pilot joins a mission through a wormhole to search for a new home for humanity. Directed by Christopher Nolan.</p></details>
+                        </div>
+                    </article>
+                    <article class="movie-card" id="inception">
+
+                        <img src="images/inception.jpg" alt="Inception theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2010 &middot; Sci-Fi &middot; 148 min</p>
+                            <h3>Inception</h3>
+                            <p>A heist where the most important place is inside a dream.</p>
+                            <details><summary>Read synopsis</summary><p>A team enters shared dreams to plant an idea in a businessman’s mind. Each layer makes the mission more complicated. Directed by Christopher Nolan.</p></details>
+                        </div>
+                    </article>
                 </div>
             </section>
-            <noscript><p>Search needs JavaScript. You can still browse all six films below.</p></noscript>
-            <p id="result-count" class="movie-meta" role="status">6 movies found</p>
-            <section aria-label="Movie catalog" class="movie-grid">
-                <h2 class="visually-hidden">Movie collection</h2>
-            <article class="movie-card" id="interstellar" data-title="interstellar" data-genre="Sci-Fi">
-                <span class="pick-label">Movie night pick</span>
-                <img src="images/interstellar.jpg" alt="Interstellar theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2014 &middot; Sci-Fi &middot; 169 min</p>
-                    <h3>Interstellar</h3>
-                    <p>A journey beyond Earth, with a family story at its centre.</p>
-                    <details><summary>Read synopsis</summary><p>A former pilot joins a mission through a wormhole to search for a new home for humanity. Directed by Christopher Nolan.</p></details>
-                </div>
-            </article>
-            <article class="movie-card" id="inception" data-title="inception" data-genre="Sci-Fi">
+            <section class="genre-section" id="action" aria-labelledby="action-title">
+                <h2 id="action-title">Action</h2>
+                <div class="movie-grid">
+                    <article class="movie-card" id="the-dark-knight">
 
-                <img src="images/inception.jpg" alt="Inception theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2010 &middot; Sci-Fi &middot; 148 min</p>
-                    <h3>Inception</h3>
-                    <p>A heist where the most important place is inside a dream.</p>
-                    <details><summary>Read synopsis</summary><p>A team enters shared dreams to plant an idea in a businessman’s mind. Each layer makes the mission more complicated. Directed by Christopher Nolan.</p></details>
+                        <img src="images/the-dark-knight.jpg" alt="The Dark Knight theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2008 &middot; Action &middot; 152 min</p>
+                            <h3>The Dark Knight</h3>
+                            <p>Batman faces the Joker and some difficult choices in Gotham.</p>
+                            <details><summary>Read synopsis</summary><p>Batman, Harvey Dent and James Gordon try to stop organised crime, but the Joker puts their plans and principles to the test. Directed by Christopher Nolan.</p></details>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="movie-card" id="the-dark-knight" data-title="the dark knight" data-genre="Action">
-
-                <img src="images/the-dark-knight.jpg" alt="The Dark Knight theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2008 &middot; Action &middot; 152 min</p>
-                    <h3>The Dark Knight</h3>
-                    <p>Batman faces the Joker and some difficult choices in Gotham.</p>
-                    <details><summary>Read synopsis</summary><p>Batman, Harvey Dent and James Gordon try to stop organised crime, but the Joker puts their plans and principles to the test. Directed by Christopher Nolan.</p></details>
-                </div>
-            </article>
-            <article class="movie-card" id="spirited-away" data-title="spirited away" data-genre="Animation">
-
-                <img src="images/spirited-away.png" alt="Spirited Away theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2001 &middot; Animation &middot; 125 min</p>
-                    <h3>Spirited Away</h3>
-                    <p>A young girl finds courage in a strange world of spirits.</p>
-                    <details><summary>Read synopsis</summary><p>After her parents are transformed, Chihiro takes a job in a bathhouse for spirits and searches for a way home. Directed by Hayao Miyazaki.</p></details>
-                </div>
-            </article>
-            <article class="movie-card" id="ratatouille" data-title="ratatouille" data-genre="Animation">
-
-                <img src="images/ratatouille.jpg" alt="Ratatouille theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2007 &middot; Animation &middot; 111 min</p>
-                    <h3>Ratatouille</h3>
-                    <p>A small chef with a big dream finds his way into a Paris kitchen.</p>
-                    <details><summary>Read synopsis</summary><p>Remy, a rat who loves cooking, teams up with a young kitchen worker to make food in a famous restaurant. Directed by Brad Bird.</p></details>
-                </div>
-            </article>
-            <article class="movie-card" id="the-grand-budapest-hotel" data-title="the grand budapest hotel" data-genre="Comedy">
-
-                <img src="images/the-grand-budapest-hotel.png" alt="The Grand Budapest Hotel theatrical poster" width="400" height="600" loading="lazy">
-                <div class="movie-info">
-                    <p class="movie-meta mb-2">2014 &middot; Comedy &middot; 99 min</p>
-                    <h3>The Grand Budapest Hotel</h3>
-                    <p>A hotel concierge and his lobby boy get caught up in a mystery.</p>
-                    <details><summary>Read synopsis</summary><p>Gustave and Zero become friends while dealing with a stolen painting, an inheritance and a chase across a fictional European country. Directed by Wes Anderson.</p></details>
-                </div>
-            </article>
             </section>
-            <p id="empty-message" class="note-box" hidden>No movies match. Try another title or choose “All genres”.</p>
+            <section class="genre-section" id="animation" aria-labelledby="animation-title">
+                <h2 id="animation-title">Animation</h2>
+                <div class="movie-grid">
+                    <article class="movie-card" id="spirited-away">
+
+                        <img src="images/spirited-away.png" alt="Spirited Away theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2001 &middot; Animation &middot; 125 min</p>
+                            <h3>Spirited Away</h3>
+                            <p>A young girl finds courage in a strange world of spirits.</p>
+                            <details><summary>Read synopsis</summary><p>After her parents are transformed, Chihiro takes a job in a bathhouse for spirits and searches for a way home. Directed by Hayao Miyazaki.</p></details>
+                        </div>
+                    </article>
+                    <article class="movie-card" id="ratatouille">
+
+                        <img src="images/ratatouille.jpg" alt="Ratatouille theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2007 &middot; Animation &middot; 111 min</p>
+                            <h3>Ratatouille</h3>
+                            <p>A small chef with a big dream finds his way into a Paris kitchen.</p>
+                            <details><summary>Read synopsis</summary><p>Remy, a rat who loves cooking, teams up with a young kitchen worker to make food in a famous restaurant. Directed by Brad Bird.</p></details>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="genre-section" id="comedy" aria-labelledby="comedy-title">
+                <h2 id="comedy-title">Comedy</h2>
+                <div class="movie-grid">
+                    <article class="movie-card" id="the-grand-budapest-hotel">
+
+                        <img src="images/the-grand-budapest-hotel.png" alt="The Grand Budapest Hotel theatrical poster" width="400" height="600" loading="lazy">
+                        <div class="movie-info">
+                            <p class="movie-meta mb-2">2014 &middot; Comedy &middot; 99 min</p>
+                            <h3>The Grand Budapest Hotel</h3>
+                            <p>A hotel concierge and his lobby boy get caught up in a mystery.</p>
+                            <details><summary>Read synopsis</summary><p>Gustave and Zero become friends while dealing with a stolen painting, an inheritance and a chase across a fictional European country. Directed by Wes Anderson.</p></details>
+                        </div>
+                    </article>
+                </div>
+            </section>
             <section class="mt-5" aria-labelledby="compare-title">
                 <h2 id="compare-title" class="mb-3">How much time do you have?</h2>
                 <div class="table-wrapper" tabindex="0" role="region" aria-label="Movie running times, scroll horizontally on small screens">

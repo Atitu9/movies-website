@@ -111,3 +111,16 @@ main { min-height: 65vh; }
     .content-panel, .review { padding: 20px; }
     .review img { max-width: 140px; }
 }
+.genre-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.genre-section {
+    margin-top: 32px;
+    scroll-margin-top: 20px;
+}
+.genre-section h2 {
+    margin-bottom: 16px;
+}

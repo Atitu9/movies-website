@@ -1,6 +1,6 @@
 # MovieTime — Movies Website
 
-A responsive movie website for the 2026 frontend midterm. The topic is movies: visitors can browse six films, read short reviews, compare running times and preview a suggestion.
+A responsive movie website for the 2026 frontend midterm. The topic is movies: visitors can browse six films by genre, read short reviews, compare running times and view a contact form demonstration.
 
 **Published website:** https://Atitu9.github.io/movies-website/
 
@@ -18,18 +18,18 @@ Add or remove rows to match your group. Each member should understand the whole 
 ## Pages and features
 
 - `index.html` — welcome section and three movie picks.
-- `movies.html` — six film cards, title search, genre filter, expandable synopses and a running-time table.
+- `movies.html` — six film cards grouped by genre, links to jump to each section, expandable synopses and a running-time table.
 - `reviews.html` — three spoiler-free reviews.
 - `about.html` — project description, list and FAQ.
-- `contact.html` — labelled form with required fields, email validation, message preview and reset.
+- `contact.html` — labelled form with required fields, an email input and a reset button.
 - Shared navigation, current-page highlight, footer contact and external social links.
 - Responsive layouts for desktop, tablet and mobile, keyboard focus styles and a skip link.
 
-The contact form is a **local demonstration**. It does not send email, store personal data or contact a server. The actual contact link opens GitHub Issues. The footer's YouTube and Instagram links are external film accounts, not accounts belonging to this project.
+The contact form is a **layout demonstration**. It does not send email or save form data. Use the GitHub Issues link to contact the project. The footer's YouTube and Instagram links are external film accounts, not accounts belonging to this project.
 
 ## Technologies
 
-HTML5, CSS3, [Bootstrap 5.3.8](https://getbootstrap.com/docs/5.3/getting-started/download/) and a small amount of plain JavaScript. No framework, API key, database, build process or package installation is needed. Bootstrap's distributed files and MIT license are included in `vendor/bootstrap/`. Only Bootstrap CSS is needed by these pages; the optional JS bundle is included for future course exercises.
+HTML5, CSS3 and [Bootstrap 5.3.8](https://getbootstrap.com/docs/5.3/getting-started/download/). No JavaScript, framework, API key, database, build process or package installation is needed. Bootstrap's CSS file and MIT license are included in `vendor/bootstrap/`.
 
 The Nunito Sans font loads from Google Fonts. If offline, the site falls back to Arial. Posters and Bootstrap are local, so the pages still work without a connection.
 
@@ -61,8 +61,8 @@ Open `index.html` in your browser. Alternatively, open the folder in VS Code and
 - Шапка использует Flexbox: логотип и меню расположены в одну строку, на планшете — друг под другом.
 - Карточки используют CSS Grid: три колонки на компьютере, две на планшете и одна на телефоне.
 - Bootstrap отвечает за контейнеры, сетку некоторых разделов, кнопки и отступы. Собственный CSS подключён после Bootstrap, чтобы переопределять оформление.
-- JavaScript берёт текст поиска и выбранный жанр, сравнивает их с `data-title` и `data-genre`, затем скрывает неподходящие карточки атрибутом `hidden`.
-- Форма использует проверку HTML (`required`, `type="email"`, `minlength`), а `preventDefault()` отменяет отправку и позволяет показать локальный предпросмотр.
+- Жанры в каталоге — обычные HTML-ссылки на разделы страницы, например `href="#animation"`.
+- Контактная форма содержит подписанные поля, HTML-атрибут `required` и кнопку сброса. Макет формы не отправляет и не сохраняет данные.
 - Перед защитой самостоятельно попробуйте добавить карточку фильма, изменить число колонок и добавить поле формы.
 
 ## Image credits
