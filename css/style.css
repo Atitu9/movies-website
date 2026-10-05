@@ -1,0 +1,113 @@
+/* Shared colors and spacing for all five pages. */
+:root {
+    --red: #b52b35;
+    --dark: #20252d;
+    --text: #30343b;
+    --muted: #626872;
+    --border: #dce0e5;
+    --background: #f5f6f8;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+h1, h2, h3 { color: var(--dark); font-weight: 800; line-height: 1.25; }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.2rem; }
+a { color: var(--red); text-underline-offset: 4px; }
+a:hover { color: #7c1720; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+    outline: 3px solid #db9b21;
+    outline-offset: 4px;
+}
+
+/* Flexbox keeps the logo and navigation on the same line. */
+.site-header { background: var(--dark); }
+.header-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 20px; padding-bottom: 20px; }
+.logo { color: white; text-decoration: none; font-size: 1.6rem; font-weight: 800; white-space: nowrap; }
+.logo span { color: #ff9095; }
+.logo:hover { color: white; }
+.nav-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.nav-list a { display: block; color: #ebedf0; padding: 7px 13px; text-decoration: none; border-radius: 4px; }
+.nav-list a:hover, .nav-list a[aria-current="page"] { background: var(--red); color: white; }
+.skip-link { position: absolute; top: -80px; left: 16px; z-index: 10; padding: 12px; background: white; }
+.skip-link:focus { top: 8px; }
+main { min-height: 65vh; }
+.hero { background: #e9edf1; border-bottom: 1px solid var(--border); }
+.hero-content { max-width: 610px; }
+.eyebrow { margin-bottom: 12px; color: var(--red); font-weight: 800; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
+.hero p:not(.eyebrow) { font-size: 1.1rem; max-width: 540px; }
+.hero-poster { display: block; width: 200px; max-width: 100%; height: 296px; object-fit: cover; margin: 0 auto; border-radius: 5px; }
+.hero-caption { margin-top: 10px; color: var(--muted); font-size: .875rem; text-align: center; }
+.btn-primary { --bs-btn-bg: var(--red); --bs-btn-border-color: var(--red); --bs-btn-hover-bg: #90222a; --bs-btn-hover-border-color: #90222a; --bs-btn-active-bg: #7c1720; --bs-btn-active-border-color: #7c1720; font-weight: 700; }
+.btn-outline-secondary { color: var(--dark); border-color: #858b95; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 22px; }
+.section-heading h2 { margin: 0; }
+.section-heading a { white-space: nowrap; }
+
+/* The movie cards use CSS Grid. Other sections use Bootstrap's grid. */
+.movie-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.movie-card { position: relative; background: white; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.movie-card img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; }
+.movie-info { padding: 20px; }
+.movie-info p:last-child { margin-bottom: 0; }
+.movie-meta { color: var(--muted); font-size: .9rem; }
+.pick-label { position: absolute; top: 12px; left: 12px; background: var(--red); color: white; padding: 4px 11px; border-radius: 3px; font-size: .875rem; font-weight: 700; }
+.movie-card summary { color: var(--red); cursor: pointer; font-weight: 700; }
+.movie-card details p { margin-top: 10px; }
+.note-box { padding: 24px; background: white; border-left: 4px solid var(--red); }
+.page-heading { padding: 42px 0 28px; }
+.page-heading p { max-width: 650px; color: var(--muted); margin-bottom: 0; }
+.filter-bar { padding: 20px; background: white; border: 1px solid var(--border); border-radius: 6px; }
+.form-label { font-weight: 700; }
+.form-control, .form-select { min-height: 44px; border-color: #9198a2; }
+[hidden] { display: none !important; }
+.table-wrapper { overflow-x: auto; background: white; border: 1px solid var(--border); border-radius: 6px; }
+.movie-table { width: 100%; border-collapse: collapse; min-width: 460px; }
+.movie-table caption { caption-side: top; padding: 16px; color: var(--muted); }
+.movie-table th, .movie-table td { padding: 13px 16px; border-bottom: 1px solid var(--border); text-align: left; }
+.movie-table thead { background: var(--dark); color: white; }
+.movie-table tbody tr:nth-child(even) { background: #edf0f4; }
+.review { background: white; border: 1px solid var(--border); padding: 24px; margin-bottom: 24px; border-radius: 6px; }
+.review img { width: 100%; height: auto; max-width: 180px; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 4px; }
+.review .verdict { font-weight: 700; color: var(--red); margin-bottom: 0; }
+.content-panel { background: white; border: 1px solid var(--border); padding: 28px; border-radius: 6px; }
+.content-panel li { margin-bottom: 8px; }
+.faq-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.faq-item summary { font-weight: 700; cursor: pointer; }
+.faq-item p { margin: 12px 0 0; }
+.form-note { color: var(--muted); font-size: .9rem; }
+#form-result { margin-top: 20px; padding: 16px; background: #eaf4ed; border: 1px solid #8baa93; overflow-wrap: anywhere; }
+.site-footer { margin-top: 48px; padding: 30px 0; background: var(--dark); color: #e5e7eb; }
+.site-footer p { margin-bottom: 5px; }
+.site-footer a { color: #fff; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+.copyright { margin-top: 20px; padding-top: 16px; border-top: 1px solid #4b515a; font-size: .875rem; color: #c4c9d1; }
+
+/* Tablet: two cards per row and a stacked header. */
+@media (max-width: 991px) {
+    .header-content { flex-direction: column; gap: 12px; }
+    .movie-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    h1 { font-size: 2.1rem; }
+}
+
+/* Mobile: one card per row and smaller spacing. */
+@media (max-width: 575px) {
+    .nav-list { justify-content: center; gap: 2px; }
+    .nav-list a { padding: 6px 9px; font-size: .9rem; }
+    .movie-grid { grid-template-columns: 1fr; gap: 20px; }
+    .hero-content { text-align: center; }
+    .hero-poster { width: 160px; height: 237px; }
+    h1 { font-size: 1.9rem; }
+    .section-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .page-heading { padding-top: 30px; }
+    .content-panel, .review { padding: 20px; }
+    .review img { max-width: 140px; }
+}

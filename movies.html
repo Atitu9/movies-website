@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse six movie picks, filter by genre and compare running times.">
+    <title>Movies | MovieTime</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23b52b35'/%3E%3Cpath d='M8 24V8l8 10 8-10v16' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="index.html" aria-label="MovieTime home">Movie<span>Time</span></a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="movies.html" aria-current="page">Movies</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main-content">
+        <div class="container">
+            <div class="page-heading">
+                <p class="eyebrow">The collection</p>
+                <h1>Find your next movie</h1>
+                <p>Six films to start with. Read a little about each one or choose a genre you enjoy.</p>
+            </div>
+            <section aria-label="Movie filters" class="filter-bar mb-4">
+                <div class="row g-3">
+                    <div class="col-md-8">
+                        <label class="form-label" for="movie-search">Search by title</label>
+                        <input class="form-control" type="search" id="movie-search" placeholder="Try Inception...">
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label" for="genre-filter">Genre</label>
+                        <select class="form-select" id="genre-filter">
+                            <option value="All">All genres</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Action">Action</option>
+                            <option value="Animation">Animation</option>
+                            <option value="Comedy">Comedy</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <noscript><p>Search needs JavaScript. You can still browse all six films below.</p></noscript>
+            <p id="result-count" class="movie-meta" role="status">6 movies found</p>
+            <section aria-label="Movie catalog" class="movie-grid">
+                <h2 class="visually-hidden">Movie collection</h2>
+            <article class="movie-card" id="interstellar" data-title="interstellar" data-genre="Sci-Fi">
+                <span class="pick-label">Movie night pick</span>
+                <img src="images/interstellar.jpg" alt="Interstellar theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2014 &middot; Sci-Fi &middot; 169 min</p>
+                    <h3>Interstellar</h3>
+                    <p>A journey beyond Earth, with a family story at its centre.</p>
+                    <details><summary>Read synopsis</summary><p>A former pilot joins a mission through a wormhole to search for a new home for humanity. Directed by Christopher Nolan.</p></details>
+                </div>
+            </article>
+            <article class="movie-card" id="inception" data-title="inception" data-genre="Sci-Fi">
+
+                <img src="images/inception.jpg" alt="Inception theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2010 &middot; Sci-Fi &middot; 148 min</p>
+                    <h3>Inception</h3>
+                    <p>A heist where the most important place is inside a dream.</p>
+                    <details><summary>Read synopsis</summary><p>A team enters shared dreams to plant an idea in a businessman’s mind. Each layer makes the mission more complicated. Directed by Christopher Nolan.</p></details>
+                </div>
+            </article>
+            <article class="movie-card" id="the-dark-knight" data-title="the dark knight" data-genre="Action">
+
+                <img src="images/the-dark-knight.jpg" alt="The Dark Knight theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2008 &middot; Action &middot; 152 min</p>
+                    <h3>The Dark Knight</h3>
+                    <p>Batman faces the Joker and some difficult choices in Gotham.</p>
+                    <details><summary>Read synopsis</summary><p>Batman, Harvey Dent and James Gordon try to stop organised crime, but the Joker puts their plans and principles to the test. Directed by Christopher Nolan.</p></details>
+                </div>
+            </article>
+            <article class="movie-card" id="spirited-away" data-title="spirited away" data-genre="Animation">
+
+                <img src="images/spirited-away.png" alt="Spirited Away theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2001 &middot; Animation &middot; 125 min</p>
+                    <h3>Spirited Away</h3>
+                    <p>A young girl finds courage in a strange world of spirits.</p>
+                    <details><summary>Read synopsis</summary><p>After her parents are transformed, Chihiro takes a job in a bathhouse for spirits and searches for a way home. Directed by Hayao Miyazaki.</p></details>
+                </div>
+            </article>
+            <article class="movie-card" id="ratatouille" data-title="ratatouille" data-genre="Animation">
+
+                <img src="images/ratatouille.jpg" alt="Ratatouille theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2007 &middot; Animation &middot; 111 min</p>
+                    <h3>Ratatouille</h3>
+                    <p>A small chef with a big dream finds his way into a Paris kitchen.</p>
+                    <details><summary>Read synopsis</summary><p>Remy, a rat who loves cooking, teams up with a young kitchen worker to make food in a famous restaurant. Directed by Brad Bird.</p></details>
+                </div>
+            </article>
+            <article class="movie-card" id="the-grand-budapest-hotel" data-title="the grand budapest hotel" data-genre="Comedy">
+
+                <img src="images/the-grand-budapest-hotel.png" alt="The Grand Budapest Hotel theatrical poster" width="400" height="600" loading="lazy">
+                <div class="movie-info">
+                    <p class="movie-meta mb-2">2014 &middot; Comedy &middot; 99 min</p>
+                    <h3>The Grand Budapest Hotel</h3>
+                    <p>A hotel concierge and his lobby boy get caught up in a mystery.</p>
+                    <details><summary>Read synopsis</summary><p>Gustave and Zero become friends while dealing with a stolen painting, an inheritance and a chase across a fictional European country. Directed by Wes Anderson.</p></details>
+                </div>
+            </article>
+            </section>
+            <p id="empty-message" class="note-box" hidden>No movies match. Try another title or choose “All genres”.</p>
+            <section class="mt-5" aria-labelledby="compare-title">
+                <h2 id="compare-title" class="mb-3">How much time do you have?</h2>
+                <div class="table-wrapper" tabindex="0" role="region" aria-label="Movie running times, scroll horizontally on small screens">
+                    <table class="movie-table">
+                        <caption>Running times for the full collection, from shortest to longest.</caption>
+                        <thead><tr><th scope="col">Movie</th><th scope="col">Year</th><th scope="col">Genre</th><th scope="col">Length</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">The Grand Budapest Hotel</th><td>2014</td><td>Comedy</td><td>99 min</td></tr>
+                            <tr><th scope="row">Ratatouille</th><td>2007</td><td>Animation</td><td>111 min</td></tr>
+                            <tr><th scope="row">Spirited Away</th><td>2001</td><td>Animation</td><td>125 min</td></tr>
+                            <tr><th scope="row">Inception</th><td>2010</td><td>Sci-Fi</td><td>148 min</td></tr>
+                            <tr><th scope="row">The Dark Knight</th><td>2008</td><td>Action</td><td>152 min</td></tr>
+                            <tr><th scope="row">Interstellar</th><td>2014</td><td>Sci-Fi</td><td>169 min</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-7">
+                    <p class="fw-bold">MovieTime</p>
+                    <p>A few good films for your next movie night.</p>
+                    <p>Contact: <a href="https://github.com/Atitu9/movies-website/issues">our project on GitHub</a></p>
+                </div>
+                <div class="col-md-5">
+                    <p class="fw-bold">Around the web</p>
+                    <nav class="footer-links" aria-label="Film and social links">
+                        <a href="https://www.imdb.com/">IMDb</a>
+                        <a href="https://www.youtube.com/@WarnerBros">YouTube</a>
+                        <a href="https://www.instagram.com/letterboxd/">Instagram</a>
+                    </nav>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 MovieTime. Student project. Movie posters belong to their respective owners.</p>
+        </div>
+    </footer>
+</body>
+</html>
