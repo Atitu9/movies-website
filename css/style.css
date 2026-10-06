@@ -1,3 +1,4 @@
+
 :root {
     --red: #b52b35;
     --dark: #20252d;
@@ -24,6 +25,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     outline: 3px solid #db9b21;
     outline-offset: 4px;
 }
+
+
 .site-header { background: var(--dark); }
 .header-content { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 20px; padding-bottom: 20px; }
 .logo { color: white; text-decoration: none; font-size: 1.6rem; font-weight: 800; white-space: nowrap; }
@@ -46,6 +49,7 @@ main { min-height: 65vh; }
 .section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 22px; }
 .section-heading h2 { margin: 0; }
 .section-heading a { white-space: nowrap; }
+
 
 .movie-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .movie-card { position: relative; background: white; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
@@ -85,11 +89,13 @@ main { min-height: 65vh; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
 .copyright { margin-top: 20px; padding-top: 16px; border-top: 1px solid #4b515a; font-size: .875rem; color: #c4c9d1; }
 
+
 @media (max-width: 991px) {
     .header-content { flex-direction: column; gap: 12px; }
     .movie-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     h1 { font-size: 2.1rem; }
 }
+
 
 @media (max-width: 575px) {
     .nav-list { justify-content: center; gap: 2px; }
