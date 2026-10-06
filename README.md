@@ -1,3 +1,4 @@
+
 # MovieTime — Movies Website
 
 A responsive movie website for the 2026 frontend midterm. The topic is movies: visitors can browse six films by genre, read short reviews, compare running times and view a contact form demonstration.
